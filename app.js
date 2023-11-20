@@ -6,6 +6,15 @@ app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/home.html"))
 }); 
 
+app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"/views/home.html"))
+})
+app.get("/Registrarse",(req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/register.html"))
+});
+app.get("/Ingresar",(req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/login.html"))
+});
 
 
 
