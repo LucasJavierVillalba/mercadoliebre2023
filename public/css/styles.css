@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import"./register.css";
+@import"./login.css";
 
 :root {
     --color-amarillo:#EAC926;
@@ -27,6 +29,8 @@ a {
 }
 
 /*version mobile*/
+
+/*header*/
 .home_header {
     background-color: var(--color-amarillo);
     font-family: "Roboto", sans-serif;
@@ -45,8 +49,10 @@ a {
     padding-top: 2.5%;
     padding-left: 2.4%;
 }
-.searchBar_header #search{
-    border-top: 1px solid var(--color-negro);
+.searchBar_header form input{
+    padding:1% 10%;
+    border: 1px solid white;
+    border-radius: 4%;
 }
 
 .fa-magnifying-glass {
@@ -84,7 +90,7 @@ a {
 .burger-menu{
     text-align: center;
 }
-
+/*main*/
 .home_body{
     width: 100vw;
 }
@@ -165,10 +171,10 @@ a {
 }
 
 .home_main section article {
-    background-color: white;
+    background-color: var(--color-blanco);
     margin-bottom: 10px;
 }
-
+/*footer*/
 footer{
     margin-top:4%;
     width: 100%;
@@ -204,8 +210,8 @@ footer .copyright p {
     margin-left: 1%;
 }
 
-/* VERSION TABLET */
-@media(min-width:361px){
+/* VERSION TABLET header */
+@media(min-width:768px){
     .home_header{
         display: flex;
         align-items: center;
@@ -255,12 +261,18 @@ footer .copyright p {
         margin-left: 2%;
     }
     .fa-magnifying-glass {
-        padding: 0.2%;
+        padding: 2%;
+        width: 10%;
     }
     .searchBar_header {
-        padding-top: 1%;
-        width: 26%;
+        padding-top: 3%;
+        width: 40%;
     }
+    .searchBar_header form input {
+        padding: 2% 8%;
+        width: 85%;
+    }
+    /*main tablet*/
     .home_main section article div h4{
         display: block;
         padding-top:2%;
@@ -304,21 +316,31 @@ footer .copyright p {
     }
 }
 
-/* VERSION DESKTOP */
-@media(min-width:769px){
+/* VERSION DESKTOP header */
+@media(min-width:1024px){
     .searchBar_header {
-        margin-right: 5%;
-        width: 25%;
+        margin-right: 2%;
+        padding-top: 4%;
+        width: 35%;
+        padding-left: 0;
+    }
+    .searchBar_header form input{
+        width: 90%;
+        padding: 2% 8%;
     }
     .compra_cuotas_home{
         margin-right: 8%;
         width: 25%;
     }
+    .fa-magnifying-glass{
+        width: 8%;
+    }
     .home_header img {
-        width: 36%;
         margin-top: 3%;
         margin-left: 1%;
     }
+    /*main desktop*/
+
     .home_ultimavisita h3{
         padding-top: 1%;
         margin-top: -2%;
@@ -337,15 +359,15 @@ footer .copyright p {
         
     }
     .home_main section article div p{
-        margin-left: 2%;
-        font-size: 90%;
+        margin-left: 10%;
+      
     }
     .home_main section article div h5{
         font-size:90%;
     }
     .home_main section article div h4{
         padding-top: 10%;
-        font-size: 71%;
+      
     }
     .fa-truck{
         padding: 3%;
