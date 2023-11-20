@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-@import"./register.css";
-@import"./login.css";
 
 :root {
     --color-amarillo:#EAC926;
@@ -29,8 +27,6 @@ a {
 }
 
 /*version mobile*/
-
-/*header*/
 .home_header {
     background-color: var(--color-amarillo);
     font-family: "Roboto", sans-serif;
@@ -49,10 +45,8 @@ a {
     padding-top: 2.5%;
     padding-left: 2.4%;
 }
-.searchBar_header form input{
-    padding:1% 10%;
-    border: 1px solid white;
-    border-radius: 4%;
+.searchBar_header #search{
+    border-top: 1px solid var(--color-negro);
 }
 
 .fa-magnifying-glass {
@@ -90,7 +84,7 @@ a {
 .burger-menu{
     text-align: center;
 }
-/*main*/
+
 .home_body{
     width: 100vw;
 }
@@ -115,11 +109,7 @@ a {
     height: 30px;
     margin-top: -28px;
     background-color: white;
-    transition: all 1s;
 }
-.fa-truck:hover{
-    transform: rotateZ(-90deg)
-    }
 
 .home_banner {
     width: 100vw;
@@ -175,15 +165,10 @@ a {
 }
 
 .home_main section article {
-    box-shadow: 0px 0px 0px rgb(100, 100, 100);
-    background-color: var(--color-blanco);
+    background-color: white;
     margin-bottom: 10px;
-    transition: all 1s;
 }
-.home_main section article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-/*footer*/
+
 footer{
     margin-top:4%;
     width: 100%;
@@ -210,7 +195,6 @@ footer article i{
     color: var(--color-celeste);
     font-size: 2em;
     margin-bottom: 10px;
-    transition: all 0.5s;
 }
 
 footer .copyright p {
@@ -219,12 +203,9 @@ footer .copyright p {
     margin-bottom: 60px;
     margin-left: 1%;
 }
-footer article i:hover{
-    color: #0022AA;
-}
 
-/* VERSION TABLET header */
-@media(min-width:768px){
+/* VERSION TABLET */
+@media(min-width:361px){
     .home_header{
         display: flex;
         align-items: center;
@@ -274,27 +255,16 @@ footer article i:hover{
         margin-left: 2%;
     }
     .fa-magnifying-glass {
-        padding: 2%;
-        width: 10%;
+        padding: 0.2%;
     }
     .searchBar_header {
-        padding-top: 3%;
-        width: 40%;
+        padding-top: 1%;
+        width: 26%;
     }
-    .searchBar_header form input {
-        padding: 2% 8%;
-        width: 85%;
-    }
-    /*main tablet*/
     .home_main section article div h4{
         display: block;
         padding-top:2%;
         color: var(--color-gris-oscuro);
-        opacity: 0%;
-        transition: all, 1s;
-    }
-    .home_main section article div h4:hover{
-        opacity:100%;
     }
     .home_ultimavisita h3{
         width: 100%;
@@ -311,24 +281,16 @@ footer article i:hover{
         padding-right: 0%;
     }
     .home_main section article{
-        box-shadow: 0px 0px 0px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
         display: flex;
         flex-direction: column;
-        transition: all 1s;
-    }
-    .home_main section article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
     }
     .fa-truck{
         padding: 1.8%;
-        transition: all 1s;
     }
-
-    .fa-truck:hover{
-    transform: rotateZ(-90deg)
-    }
-
+    
     .home_ofertas h3{
         margin-left: 1%;
         width: 100%;
@@ -342,31 +304,21 @@ footer article i:hover{
     }
 }
 
-/* VERSION DESKTOP header */
-@media(min-width:1024px){
+/* VERSION DESKTOP */
+@media(min-width:769px){
     .searchBar_header {
-        margin-right: 2%;
-        padding-top: 4%;
-        width: 35%;
-        padding-left: 0;
-    }
-    .searchBar_header form input{
-        width: 90%;
-        padding: 2% 8%;
+        margin-right: 5%;
+        width: 25%;
     }
     .compra_cuotas_home{
         margin-right: 8%;
         width: 25%;
     }
-    .fa-magnifying-glass{
-        width: 8%;
-    }
     .home_header img {
+        width: 36%;
         margin-top: 3%;
         margin-left: 1%;
     }
-    /*main desktop*/
-
     .home_ultimavisita h3{
         padding-top: 1%;
         margin-top: -2%;
@@ -381,44 +333,21 @@ footer article i:hover{
         gap: 0px;
     }
     .home_main section article{
-        box-shadow: 0px 0px 0px rgb(100, 100, 100);
         width: 20%;
-        transition: all 1s;
-    }
-    .home_main section article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
     }
     .home_main section article div p{
-        margin-left: 10%;
+        margin-left: 2%;
+        font-size: 90%;
+    }
+    .home_main section article div h5{
+        font-size:90%;
     }
     .home_main section article div h4{
         padding-top: 10%;
-        opacity: 0%;
-        transition: all, 1s;
-    }
-    .home_main section article div h4:hover{
-        opacity:100%;
+        font-size: 71%;
     }
     .fa-truck{
-        padding: 2%;
-        transition: all 1s;
-    }
-    .fa-truck:hover{
-        transform: rotateZ(-90deg)
-    }
-    /*footer*/
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .copyright { 
-        width: 100%;
-    }
-    footer article i{
-        transition: all 0.5s;
-    }
-    footer article i:hover{
-        color: #0022AA;
+        padding: 3%;
     }
 }
